@@ -29,6 +29,10 @@ if(UNIX)
   include (${CMAKE_ROOT}/Modules/FindPkgConfig.cmake)
   pkg_check_modules (LIBDE265 libde265)
   pkg_check_modules (X265 x265)
+elseif(WIN32)
+  # quick fix for libde265 in Microsoft Visual Studio
+  set (LIBDE265_FOUND TRUE)
+  set (LIBDE265_LIBRARIES libde265)
 endif()
 
 if(LIBDE265_FOUND)

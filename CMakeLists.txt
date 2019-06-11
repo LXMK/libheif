@@ -54,6 +54,7 @@ elseif("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
 endif()
 
 include_directories ("${PROJECT_SOURCE_DIR}")
+include_directories ("${PROJECT_SOURCE_DIR}/../libde265/")
 
 if(UNIX)
   set(LIBHEIF_LIBRARY_NAME heif)
